@@ -35,11 +35,10 @@ const Clock: React.FC = () => {
         <span className="font-mono font-bold text-4xl lg:text-9xl">
           {hours}:{minutes}:{seconds}
         </span>
-        <p className='text-base lg:text-3xl'>
+        <p className='text-base lg:text-3xl text-blue500'>
           {formattedDate}
         </p>
       </div>
-      {/* <h6 className="text-xs lg:text-base font-normal underline underline-offset-4">DIGITAL CLOCK with Typescript</h6> */}
     </div>
   );
 };
