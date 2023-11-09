@@ -25,14 +25,14 @@ const Clock: React.FC = () => {
   return (
     <div className="flex flex-col justify-center bg-blue1000 space-y-3 lg:space-y-5 px-12 lg:px-16 py-9 lg:py-12 rounded-full text-blue100 shadow-2xl shadow-blue800">
       <div>
-        <p className="text-base lg:text-2xl font-medium lg:space-x-5">
+        <p className="text-base lg:text-2xl font-medium space-x-1 lg:space-x-5">
           {daysOfWeek.map((day, index) => (
             <span key={index} className={isToday(new Date()) && today === day ? 'text-blue300' : 'text-blue800'}>
               {day}
             </span>
           ))}
         </p>
-        <span className="font-clock font-mono font-bold text-4xl lg:text-9xl">
+        <span className="font-mono font-bold text-4xl lg:text-9xl">
           {hours}:{minutes}:{seconds}
         </span>
         <p className='text-base lg:text-2xl'>
