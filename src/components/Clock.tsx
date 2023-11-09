@@ -16,7 +16,7 @@ const Clock: React.FC = () => {
   const seconds: string = time.getSeconds().toString().padStart(2, '0');
 
   return (
-    <div className="bg-blue-100 p-4 rounded-lg text-white text-6xl font-mono shadow-lg">
+    <div className="bg-blue100 p-4 rounded-lg text-white text-6xl font-mono shadow-lg">
       <div className="flex justify-center">
         <span className="mr-2">{hours}</span>
         <span className="text-midGray">:</span>
