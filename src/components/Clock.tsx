@@ -28,7 +28,7 @@ const Clock: React.FC = () => {
         <p className="text-base lg:text-2xl font-medium lg:space-x-5">
           {daysOfWeek.map((day, index) => (
             <span key={index} className={isToday(new Date()) && today === day ? 'text-blue300' : 'text-blue800'}>
-              {day}{' '}
+              {day} 
             </span>
           ))}
         </p>
