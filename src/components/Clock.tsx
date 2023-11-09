@@ -25,9 +25,9 @@ const Clock: React.FC = () => {
   return (
     <div className="flex flex-col justify-center bg-blue1000 space-y-3 lg:space-y-5 px-12 lg:px-16 py-9 lg:py-12 rounded-full text-blue100 shadow-2xl shadow-blue800">
       <div>
-        <p className="text-base lg:text-2xl font-medium space-x-1 lg:space-x-5">
+        <p className="text-base lg:text-3xl font-medium space-x-1 lg:space-x-5">
           {daysOfWeek.map((day, index) => (
-            <span key={index} className={isToday(new Date()) && today === day ? 'text-blue300' : 'text-blue800'}>
+            <span key={index} className={isToday(new Date()) && today === day ? 'text-blue100' : 'text-blue500'}>
               {day}
             </span>
           ))}
@@ -35,11 +35,11 @@ const Clock: React.FC = () => {
         <span className="font-mono font-bold text-4xl lg:text-9xl">
           {hours}:{minutes}:{seconds}
         </span>
-        <p className='text-base lg:text-2xl'>
+        <p className='text-base lg:text-3xl'>
           {formattedDate}
         </p>
       </div>
-      <h6 className="text-xs lg:text-base font-normal underline underline-offset-4">DIGITAL CLOCK with Typescript</h6>
+      {/* <h6 className="text-xs lg:text-base font-normal underline underline-offset-4">DIGITAL CLOCK with Typescript</h6> */}
     </div>
   );
 };
