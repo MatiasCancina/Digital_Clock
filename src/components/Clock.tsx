@@ -23,7 +23,7 @@ const Clock: React.FC = () => {
   const today: string = daysOfWeek[time.getDay()];
 
   return (
-    <div className="flex flex-col justify-center bg-blue1000 space-y-4 lg:space-y-5 px-12 lg:px-16 py-10 lg:py-12 rounded-full text-blue100 shadow-2xl shadow-blue800">
+    <div className="flex flex-col justify-center bg-blue1000 space-y-3 lg:space-y-5 px-12 lg:px-16 py-9 lg:py-12 rounded-full text-blue100 shadow-2xl shadow-blue800">
       <div>
         <p className="text-base lg:text-2xl font-medium lg:space-x-5">
           {daysOfWeek.map((day, index) => (
@@ -32,10 +32,10 @@ const Clock: React.FC = () => {
             </span>
           ))}
         </p>
-        <span className="font-clock font-mono font-bold text-5xl lg:text-9xl">
+        <span className="font-clock font-mono font-bold text-4xl lg:text-9xl">
           {hours}:{minutes}:{seconds}
         </span>
-        <p className='text-xl lg:text-2xl'>
+        <p className='text-base lg:text-2xl'>
           {formattedDate}
         </p>
       </div>
