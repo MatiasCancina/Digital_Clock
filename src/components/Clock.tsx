@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { format } from 'date-fns';
 
 const Clock: React.FC = () => {
   const [time, setTime] = useState<Date>(new Date());
@@ -15,15 +16,17 @@ const Clock: React.FC = () => {
   const minutes: string = time.getMinutes().toString().padStart(2, '0');
   const seconds: string = time.getSeconds().toString().padStart(2, '0');
 
+  const formattedDate: string = format(time, 'MM-dd-yyyy EEE').toLocaleUpperCase();
+
   return (
-    <div className="bg-blue100 p-4 rounded-lg text-white text-6xl font-mono shadow-lg">
-      <div className="flex justify-center">
-        <span className="mr-2">{hours}</span>
-        <span className="text-midGray">:</span>
-        <span className="ml-2">{minutes}</span>
-        <span className="text-midGray">:</span>
-        <span className="mr-2">{seconds}</span>
-      </div>
+    <div className="flex flex-col justify-center bg-blue100 space-y-5 p-10 rounded-lg text-black text-6xl shadow-lg">
+      <p className="text-3xl font-medium">
+        {formattedDate}
+      </p>
+      <span className="font-mono font-bold text-9xl">
+        {hours}:{minutes}:{seconds}
+      </span>
+      <h1 className="text-lg font-normal">DIGITAL CLOCK with Typescript</h1>
     </div>
   );
 };

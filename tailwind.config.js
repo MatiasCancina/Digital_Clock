@@ -29,6 +29,8 @@ module.exports = {
       blue1000: "#012A4A",
       blueNextUi: "#0070F0",
       gray100: "#f8f7ff",
+      white:'#FFFFFF',
+      black:'#000000',
     },
     screens: {
       sm: "640px",
